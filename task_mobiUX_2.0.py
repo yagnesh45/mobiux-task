@@ -3,7 +3,7 @@ from datetime import datetime
 import json
 
 
-date_format = "%b-%Y"
+date_format = "%b"
 
 
 def parse_data(file_data):
