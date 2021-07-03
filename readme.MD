@@ -1,6 +1,6 @@
 ## MobiUX Developer Assignment Task
 
-Write a program that reads [this data](https://www.mobiux.in/assignment/sales-data.txt)and reports:
+Write a program that reads [this data](https://www.mobiux.in/assignment/sales-data.txt) and reports:
 
 1. Total sales of the store.
 2. Month wise sales totals.
