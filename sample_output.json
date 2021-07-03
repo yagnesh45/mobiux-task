@@ -1,0 +1,81 @@
+1. Total Sales of the store: 4583420.0 ₹
+
+2.Month wise Total Sales: {
+    "Jan": 1421330.0,
+    "Feb": 1422350.0,
+    "Mar": 1739590.0,
+    "Jun": 150.0
+}
+
+3.Month wise most popular items: {
+    "Jan": {
+        "item": "Hot Chocolate Fudge",
+        "total_quantity": 2673
+    },
+    "Feb": {
+        "item": "Hot Chocolate Fudge",
+        "total_quantity": 2636
+    },
+    "Mar": {
+        "item": "Hot Chocolate Fudge",
+        "total_quantity": 3100
+    },
+    "Jun": {
+        "item": "Chocolate Cone",
+        "total_quantity": 3
+    }
+}
+
+4.Month wise items with most revenue: {
+    "Jan": {
+        "item": "Hot Chocolate Fudge",
+        "total_revenue": 320760.0
+    },
+    "Feb": {
+        "item": "Hot Chocolate Fudge",
+        "total_revenue": 316320.0
+    },
+    "Mar": {
+        "item": "Hot Chocolate Fudge",
+        "total_revenue": 372000.0
+    },
+    "Jun": {
+        "item": "Chocolate Cone",
+        "total_revenue": 150.0
+    }
+}
+
+5. Min, Max and Average sales of Most Popular Item: {
+    "Jan": {
+        "item": "Hot Chocolate Fudge",
+        "total_quantity": 2673,
+        "no_of_order": 882,
+        "min_quantity": 1,
+        "max_quantity": 5,
+        "avg_quantity": 3.0306122448979593
+    },
+    "Feb": {
+        "item": "Hot Chocolate Fudge",
+        "total_quantity": 2636,
+        "no_of_order": 851,
+        "min_quantity": 1,
+        "max_quantity": 5,
+        "avg_quantity": 3.0975323149236194
+    },
+    "Mar": {
+        "item": "Hot Chocolate Fudge",
+        "total_quantity": 3100,
+        "no_of_order": 1049,
+        "min_quantity": 1,
+        "max_quantity": 5,
+        "avg_quantity": 2.9551954242135365
+    },
+    "Jun": {
+        "item": "Chocolate Cone",
+        "total_quantity": 3,
+        "no_of_order": 1,
+        "min_quantity": 3,
+        "max_quantity": 3,
+        "avg_quantity": 3
+    }
+}
