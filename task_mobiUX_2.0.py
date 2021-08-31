@@ -3,7 +3,7 @@ from datetime import datetime
 import json
 
 
-date_format = "%b"
+date_format = "%b-%Y"
 
 
 def parse_data(file_data):
@@ -18,17 +18,29 @@ def parse_data(file_data):
 
     iterated_heading = False  # to ignore first heading row
     sales_data = []
+    columns_data = {}
+
     for row in file_data:
         if not iterated_heading:
             iterated_heading = True
+            for column_index in range(len(row)):
+                columns_data[row[column_index]] = column_index
+
+            print(columns_data)
         else:
             try:
                 sales_row = {}
-                sales_row["sales_date"] = datetime.strptime(row[0], "%Y-%m-%d")
-                sales_row["SKU"] = row[1]
-                sales_row["unit_price"] = float(row[2])
-                sales_row["quantity"] = int(row[3])
-                sales_row["total_price"] = float(row[4])
+                sales_row["sales_date"] = datetime.strptime(
+                    row[columns_data["Date"]], "%Y-%m-%d"
+                )
+                sales_row["SKU"] = row[columns_data["SKU"]]
+                sales_row["unit_price"] = float(
+                    row[columns_data["Unit Price"]]
+                )
+                sales_row["quantity"] = int(row[columns_data["Quantity"]])
+                sales_row["total_price"] = float(
+                    row[columns_data["Total Price"]]
+                )
                 sales_data.append(sales_row)
             except Exception as ex:
                 print(
@@ -217,7 +229,7 @@ def display_formatted_items(items):
 
 def main():
 
-    with open("sales-data.csv", "r") as sales_data_file:
+    with open("sales-data2.csv", "r") as sales_data_file:
         file_content = csv.reader(sales_data_file)
         global parsed_sales_data
         parsed_sales_data = parse_data(file_content)
